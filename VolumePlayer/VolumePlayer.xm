@@ -18,7 +18,7 @@ bool downVolumePressed;
 bool upVolumePressed;
 bool finishedHolding;
 static CFRunLoopTimerRef ButtonDownTimer;
-int holdTime;
+double holdTime;
 
 #define prefpath @"/var/mobile/Library/Preferences/com.fire30.VolumePlayer.plist"
 

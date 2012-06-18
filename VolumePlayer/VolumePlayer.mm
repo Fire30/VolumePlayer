@@ -82,6 +82,7 @@ switch(GSEventGetType(changed))
             _logos_orig$_ungrouped$SpringBoard$volumeChanged$(self, _cmd, changed);
         }
         DestroyTimer();
+        upVolumePressed = false;
         break;
     }
     case kGSEventVolumeDownButtonDown:{
@@ -98,6 +99,7 @@ switch(GSEventGetType(changed))
             _logos_orig$_ungrouped$SpringBoard$volumeChanged$(self, _cmd, changed);
         }
         DestroyTimer();
+        downVolumePressed = false;
         NSLog( @"DOWN VOLUME IS UP");
         break;
         
@@ -108,4 +110,4 @@ switch(GSEventGetType(changed))
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$SpringBoard = objc_getClass("SpringBoard"); MSHookMessageEx(_logos_class$_ungrouped$SpringBoard, @selector(volumeChanged:), (IMP)&_logos_method$_ungrouped$SpringBoard$volumeChanged$, (IMP*)&_logos_orig$_ungrouped$SpringBoard$volumeChanged$);} {_logos_static_class$SBMediaController = objc_getClass("SBMediaController"); } }
-#line 103 "/Users/tj/Documents/iOS Development/VolumePlayer/VolumePlayer/VolumePlayer.xm"
+#line 105 "/Users/tj/Documents/iOS Development/VolumePlayer/VolumePlayer/VolumePlayer.xm"

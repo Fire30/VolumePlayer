@@ -76,6 +76,7 @@ switch(GSEventGetType(changed))
             %orig;
         }
         DestroyTimer();
+        upVolumePressed = false;
         break;
     }
     case kGSEventVolumeDownButtonDown:{
@@ -92,6 +93,7 @@ switch(GSEventGetType(changed))
             %orig;
         }
         DestroyTimer();
+        downVolumePressed = false;
         NSLog( @"DOWN VOLUME IS UP");
         break;
         

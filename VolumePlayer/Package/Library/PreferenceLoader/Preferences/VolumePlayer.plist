@@ -17,7 +17,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Settings</string>
+			<string>Time To Hold</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -47,7 +47,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>© 2012 Fire30</string>
+			<string>VolumePlayer © 2012 Fire30</string>
 		</dict>
 	</array>
 	<key>title</key>

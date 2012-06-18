@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		328E2446158ED09300877CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E2445158ED09300877CF1 /* Foundation.framework */; };
+		328E2457158ED09400877CF1 /* VolumePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 328E2456158ED09400877CF1 /* VolumePlayer.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		328E2442158ED09300877CF1 /* VolumePlayer.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = VolumePlayer.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		328E2445158ED09300877CF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		328E244A158ED09300877CF1 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		328E244B158ED09300877CF1 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		328E244D158ED09300877CF1 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		328E2451158ED09400877CF1 /* VolumePlayer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VolumePlayer.plist; path = Package/Library/PreferenceLoader/Preferences/VolumePlayer.plist; sourceTree = "<group>"; };
+		328E2452158ED09400877CF1 /* VolumePlayerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VolumePlayerIcon.png; path = Package/Library/PreferenceLoader/Preferences/VolumePlayerIcon.png; sourceTree = "<group>"; };
+		328E2453158ED09400877CF1 /* VolumePlayerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VolumePlayerIcon@2x.png"; path = "Package/Library/PreferenceLoader/Preferences/VolumePlayerIcon@2x.png"; sourceTree = "<group>"; };
+		328E2454158ED09400877CF1 /* VolumePlayer-Prefix.pch */ = {isa = PBXFileReference; path = "VolumePlayer-Prefix.pch"; sourceTree = "<group>"; };
+		328E2455158ED09400877CF1 /* VolumePlayer.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolumePlayer.xm; sourceTree = "<group>"; };
+		328E2456158ED09400877CF1 /* VolumePlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VolumePlayer.mm; sourceTree = "<group>"; };
+		328E245A158ED09400877CF1 /* VolumePlayer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VolumePlayer.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/VolumePlayer.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		328E243E158ED09300877CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				328E2446158ED09300877CF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		328E2435158ED09300877CF1 = {
+			isa = PBXGroup;
+			children = (
+				328E2447158ED09300877CF1 /* VolumePlayer */,
+				328E2444158ED09300877CF1 /* Frameworks */,
+				328E2443158ED09300877CF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		328E2443158ED09300877CF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				328E2442158ED09300877CF1 /* VolumePlayer.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		328E2444158ED09300877CF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				328E2445158ED09300877CF1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		328E2447158ED09300877CF1 /* VolumePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				328E2455158ED09400877CF1 /* VolumePlayer.xm */,
+				328E2456158ED09400877CF1 /* VolumePlayer.mm */,
+				328E2448158ED09300877CF1 /* Package */,
+				328E244C158ED09300877CF1 /* Supporting Files */,
+			);
+			path = VolumePlayer;
+			sourceTree = "<group>";
+		};
+		328E2448158ED09300877CF1 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				328E2449158ED09300877CF1 /* DEBIAN */,
+				328E244E158ED09400877CF1 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		328E2449158ED09300877CF1 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				328E244A158ED09300877CF1 /* control.txt */,
+				328E244B158ED09300877CF1 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		328E244C158ED09300877CF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				328E244D158ED09300877CF1 /* PackageVersion.plist */,
+				328E2454158ED09400877CF1 /* VolumePlayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		328E244E158ED09400877CF1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				328E244F158ED09400877CF1 /* PreferenceLoader */,
+				328E2458158ED09400877CF1 /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		328E244F158ED09400877CF1 /* PreferenceLoader */ = {
+			isa = PBXGroup;
+			children = (
+				328E2450158ED09400877CF1 /* Preferences */,
+			);
+			name = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		328E2450158ED09400877CF1 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				328E2451158ED09400877CF1 /* VolumePlayer.plist */,
+				328E2452158ED09400877CF1 /* VolumePlayerIcon.png */,
+				328E2453158ED09400877CF1 /* VolumePlayerIcon@2x.png */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		328E2458158ED09400877CF1 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				328E2459158ED09400877CF1 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		328E2459158ED09400877CF1 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				328E245A158ED09400877CF1 /* VolumePlayer.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		328E243F158ED09300877CF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		328E2441158ED09300877CF1 /* VolumePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 328E245D158ED09400877CF1 /* Build configuration list for PBXNativeTarget "VolumePlayer" */;
+			buildPhases = (
+				328E243C158ED09300877CF1 /* ShellScript */,
+				328E243D158ED09300877CF1 /* Sources */,
+				328E243E158ED09300877CF1 /* Frameworks */,
+				328E243F158ED09300877CF1 /* Headers */,
+				328E2440158ED09300877CF1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumePlayer;
+			productName = VolumePlayer;
+			productReference = 328E2442158ED09300877CF1 /* VolumePlayer.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		328E2437158ED09300877CF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 328E243A158ED09300877CF1 /* Build configuration list for PBXProject "VolumePlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 328E2435158ED09300877CF1;
+			productRefGroup = 328E2443158ED09300877CF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				328E2441158ED09300877CF1 /* VolumePlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		328E243C158ED09300877CF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		328E2440158ED09300877CF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		328E243D158ED09300877CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				328E2457158ED09400877CF1 /* VolumePlayer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		328E245B158ED09400877CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = "$(iOSOpenDevPath)/frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		328E245C158ED09400877CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = "$(iOSOpenDevPath)/frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		328E245E158ED09400877CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolumePlayer/VolumePlayer-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+		328E245F158ED09400877CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VolumePlayer/VolumePlayer-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		328E243A158ED09300877CF1 /* Build configuration list for PBXProject "VolumePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				328E245B158ED09400877CF1 /* Release */,
+				328E245C158ED09400877CF1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		328E245D158ED09400877CF1 /* Build configuration list for PBXNativeTarget "VolumePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				328E245E158ED09400877CF1 /* Release */,
+				328E245F158ED09400877CF1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 328E2437158ED09300877CF1 /* Project object */;
+}

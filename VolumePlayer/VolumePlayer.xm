@@ -54,7 +54,7 @@ static void doCallBack(CFRunLoopTimerRef timer, void *info)
 - (void) volumeChanged:(GSEventRef)changed
 {
 NSDictionary *prefs=[[NSDictionary alloc]initWithContentsOfFile:prefpath];
-if([prefs objectForKey:@"holdTime"]) holdTime=[[prefs objectForKey:@"holdTime"]intValue];
+if([prefs objectForKey:@"holdTime"]) holdTime=[[prefs objectForKey:@"holdTime"]doubleValue];
 
 switch(GSEventGetType(changed))
 {

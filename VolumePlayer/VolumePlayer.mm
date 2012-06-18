@@ -60,7 +60,7 @@ static void doCallBack(CFRunLoopTimerRef timer, void *info)
 
 static void _logos_method$_ungrouped$SpringBoard$volumeChanged$(SpringBoard* self, SEL _cmd, GSEventRef changed) {
 NSDictionary *prefs=[[NSDictionary alloc]initWithContentsOfFile:prefpath];
-if([prefs objectForKey:@"holdTime"]) holdTime=[[prefs objectForKey:@"holdTime"]intValue];
+if([prefs objectForKey:@"holdTime"]) holdTime=[[prefs objectForKey:@"holdTime"]doubleValue];
 
 switch(GSEventGetType(changed))
 {

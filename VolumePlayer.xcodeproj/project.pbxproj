@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		328E2446158ED09300877CF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E2445158ED09300877CF1 /* Foundation.framework */; };
 		328E2457158ED09400877CF1 /* VolumePlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 328E2456158ED09400877CF1 /* VolumePlayer.mm */; };
+		328E2461158ED0BB00877CF1 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E2460158ED0BB00877CF1 /* libsubstrate.dylib */; };
+		328E2463158ED0C000877CF1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E2462158ED0C000877CF1 /* CoreFoundation.framework */; };
+		328E246B158ED23800877CF1 /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E246A158ED23800877CF1 /* GraphicsServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		328E2451158ED09400877CF1 /* VolumePlayer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VolumePlayer.plist; path = Package/Library/PreferenceLoader/Preferences/VolumePlayer.plist; sourceTree = "<group>"; };
 		328E2452158ED09400877CF1 /* VolumePlayerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VolumePlayerIcon.png; path = Package/Library/PreferenceLoader/Preferences/VolumePlayerIcon.png; sourceTree = "<group>"; };
 		328E2453158ED09400877CF1 /* VolumePlayerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VolumePlayerIcon@2x.png"; path = "Package/Library/PreferenceLoader/Preferences/VolumePlayerIcon@2x.png"; sourceTree = "<group>"; };
-		328E2454158ED09400877CF1 /* VolumePlayer-Prefix.pch */ = {isa = PBXFileReference; path = "VolumePlayer-Prefix.pch"; sourceTree = "<group>"; };
-		328E2455158ED09400877CF1 /* VolumePlayer.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = VolumePlayer.xm; sourceTree = "<group>"; };
+		328E2454158ED09400877CF1 /* VolumePlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VolumePlayer-Prefix.pch"; sourceTree = "<group>"; };
+		328E2455158ED09400877CF1 /* VolumePlayer.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VolumePlayer.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		328E2456158ED09400877CF1 /* VolumePlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VolumePlayer.mm; sourceTree = "<group>"; };
 		328E245A158ED09400877CF1 /* VolumePlayer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VolumePlayer.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/VolumePlayer.plist; sourceTree = "<group>"; };
+		328E2460158ED0BB00877CF1 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		328E2462158ED0C000877CF1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		328E246A158ED23800877CF1 /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328E2463158ED0C000877CF1 /* CoreFoundation.framework in Frameworks */,
+				328E2461158ED0BB00877CF1 /* libsubstrate.dylib in Frameworks */,
 				328E2446158ED09300877CF1 /* Foundation.framework in Frameworks */,
+				328E246B158ED23800877CF1 /* GraphicsServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,7 @@
 		328E2435158ED09300877CF1 = {
 			isa = PBXGroup;
 			children = (
+				328E2460158ED0BB00877CF1 /* libsubstrate.dylib */,
 				328E2447158ED09300877CF1 /* VolumePlayer */,
 				328E2444158ED09300877CF1 /* Frameworks */,
 				328E2443158ED09300877CF1 /* Products */,
@@ -58,6 +68,8 @@
 		328E2444158ED09300877CF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				328E246A158ED23800877CF1 /* GraphicsServices.framework */,
+				328E2462158ED0C000877CF1 /* CoreFoundation.framework */,
 				328E2445158ED09300877CF1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -298,15 +310,23 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VolumePlayer/VolumePlayer-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
-				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = YES;
+				iOSOpenDevDevice = 192.168.1.52;
+				iOSOpenDevInstallOnAnyBuild = YES;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Release;
@@ -316,15 +336,23 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VolumePlayer/VolumePlayer-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
-				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = YES;
+				iOSOpenDevDevice = 192.168.1.52;
+				iOSOpenDevInstallOnAnyBuild = YES;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Debug;
@@ -348,6 +376,7 @@
 				328E245F158ED09400877CF1 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
